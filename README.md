@@ -6,7 +6,8 @@ react-dynamic-router
 [![npm](https://img.shields.io/npm/v/@ultraq/react-dynamic-router.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-dynamic-router)
 [![License](https://img.shields.io/github/license/ultraq/react-dynamic-router.svg?maxAge=2592000)](https://github.com/ultraq/react-dynamic-router/blob/master/LICENSE.txt)
 
-A combination router and animation component for dynamic class names based on
+Control the animation to apply to a React route transition.  This component is a
+combination router and animation component for dynamic class names based on
 which way the user is navigating through your application routes.
 
 

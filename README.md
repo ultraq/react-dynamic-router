@@ -2,7 +2,7 @@
 react-dynamic-router
 ====================
 
-[![Build Status](https://travis-ci.org/ultraq/react-dynamic-router.svg?branch=master)](https://travis-ci.org/ultraq/react-dynamic-router)
+[![Build Status](https://travis-ci.com/ultraq/react-dynamic-router.svg?branch=master)](https://travis-ci.com/ultraq/react-dynamic-router)
 [![npm](https://img.shields.io/npm/v/@ultraq/react-dynamic-router.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-dynamic-router)
 [![License](https://img.shields.io/github/license/ultraq/react-dynamic-router.svg?maxAge=2592000)](https://github.com/ultraq/react-dynamic-router/blob/master/LICENSE.txt)
 

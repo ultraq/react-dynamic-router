@@ -1,0 +1,48 @@
+{
+	"name": "react-dynamic-router",
+	"version": "1.0.0",
+	"description": "A combination router and animation component for dynamic class names based on which way the user is navigating through your application routes",
+	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ultraq/react-dynamic-router.git"
+	},
+	"main": "DynamicRouter.cjs.js",
+	"module": "DynamicRouter.es.js",
+	"scripts": {
+		"lint": "eslint \"*.js\"",
+		"test": "npm run lint",
+		"build": "npm run build:cjs && npm run build:es",
+		"build:cjs": "cross-env-shell BABEL_ENV=cjs babel DynamicRouter.js --out-file DynamicRouter.cjs.js --source-maps",
+		"build:es": "cross-env-shell BABEL_ENV=es babel DynamicRouter.js --out-file DynamicRouter.es.js --source-maps",
+		"prepublishOnly": "npm run build"
+	},
+	"peerDependencies": {
+		"prop-types": "15",
+		"react": "16",
+		"react-router-dom": "5",
+		"react-transition-group": "4"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.8.4",
+		"@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+		"@babel/preset-env": "^7.8.4",
+		"@babel/preset-react": "^7.8.3",
+		"babel-eslint": "^10.0.3",
+		"babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+		"cross-env": "^7.0.0",
+		"eslint": "^6.8.0",
+		"eslint-config-ultraq": "^2.2.0",
+		"eslint-plugin-react": "^7.18.3",
+		"prop-types": "^15.7.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-router-dom": "^5.1.2",
+		"react-transition-group": "^4.3.0"
+	},
+	"engines": {
+		"node": ">=10"
+	}
+}

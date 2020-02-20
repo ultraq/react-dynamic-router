@@ -57,6 +57,8 @@ function withLastRoute(nextRoute, routeClassNameGenerator) {
  * 
  * @param {Function} children
  *   Whether or not to use exact path matching
+ * @param {Node} component
+ *   See: https://reactcommunity.org/react-transition-group/transition-group#TransitionGroup-prop-component
  * @param {Function} generateRouteClassName
  *   A function, given the next route, previous route, and exact matching flag
  *   to return a class name that will be applied to the route container so that
@@ -64,8 +66,8 @@ function withLastRoute(nextRoute, routeClassNameGenerator) {
  * @param {Location} location
  * @return {*}
  */
-const DynamicRouter = ({children, generateRouteClassName, location}) => (
-	<TransitionGroup childFactory={child => {
+const DynamicRouter = ({children, component, generateRouteClassName, location}) => (
+	<TransitionGroup component={component} childFactory={child => {
 		return React.cloneElement(child, {
 			routeClassName: withLastRoute(location.pathname, generateRouteClassName)
 		});
@@ -82,8 +84,13 @@ const DynamicRouter = ({children, generateRouteClassName, location}) => (
 
 DynamicRouter.propTypes = {
 	children: PropTypes.func.isRequired,
+	component: PropTypes.any,
 	generateRouteClassName: PropTypes.func.isRequired,
 	location: PropTypes.object.isRequired
+};
+
+DynamicRouter.defaultProps = {
+	component: null
 };
 
 export default withRouter(DynamicRouter);

@@ -26,7 +26,7 @@ Usage
 you to add your own clases to page routes for the purpose of performing
 animations between one route and another.
 
-Normally with those components, you can only specify a single animation class,
+Normally with those components you can only specify a single animation class,
 applied no matter which 'direction' your users are going through your app.  This
 component takes a route class name generator function that, given information
 about the to/from routes, can return a different class name, allowing you to
@@ -71,7 +71,7 @@ function generateRouteClassName(nextRoute, lastRoute) {
 ```
 
 ### Props
-
- - **generateClassName**: a required function, given the last and next routes,
-   expected to return a class name that can be passed down to the child function
-   for use.
+ - **component**: See: https://reactcommunity.org/react-transition-group/transition-group#TransitionGroup-prop-component
+ - **generateRouteClassName**: a required function, given the last and next
+   routes, expected to return a class name that can be passed down to the child
+   function for use.  This value is augmented with react-router's "state"

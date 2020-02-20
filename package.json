@@ -1,5 +1,5 @@
 {
-	"name": "react-dynamic-router",
+	"name": "@ultraq/react-dynamic-router",
 	"version": "1.0.0",
 	"description": "A combination router and animation component for dynamic class names based on which way the user is navigating through your application routes",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",

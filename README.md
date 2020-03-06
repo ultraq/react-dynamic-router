@@ -35,23 +35,12 @@ perform reverse animations so that the motions between routes are coherent.
 ```javascript
 import DynamicRouter from '@ultraq/react-dynamic-router';
 
-let lastResult = 'animate-forward';
-
-// NOTE: This function is called at several points of the route transition, so
-//       you'll need to store your last result and return it when the next and
-//       last route match which can be the case when one component transitions
-//       out then the next one comes in but needs to maintain the same motion.
 function generateRouteClassName(nextRoute, lastRoute) {
-  if (nextRoute === lastRoute) {
-    return lastResult;
-  }
   if (lastRoute === '/step1' && nextRoute === '/step2') {
-  	lastResult = 'animate-forward';
-  	return lastResult;
+  	return 'animate-forward';
   }
   else if (lastRoute === '/step2' && nextRoute === '/step1') {
-  	lastResult = 'animate-backward';
-  	return lastResult;
+  	return 'animate-backward';
   }
   return 'animate-forward'; // Some kind of default
 }

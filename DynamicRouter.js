@@ -16,7 +16,9 @@ const ComponentToFunction = ({children, ...props}) => {
 	return children(props);
 };
 
-let lastRoute;
+// TODO: These should be state values on the dynamic router, otherwise they're
+//       static and devs can only have 1 instance of the dynamic router!
+let lastRoute, lastClass;
 
 /**
  * Use the end of an animation on the given node to signal the end of a
@@ -43,11 +45,20 @@ const useAnimationForEndTransition = (node, done) => {
  * @return {String}
  */
 function withLastRoute(nextRoute, routeClassNameGenerator) {
+
+	// Because of how often react-router renders, the case of the routes being
+	// exactly the same can occur, but is not useful for the class name generator,
+	// so return the last class result.
+	if (lastRoute === nextRoute) {
+		return lastClass;
+	}
+
 	if (!lastRoute) {
 		lastRoute = nextRoute;
 	}
 	let result = routeClassNameGenerator(nextRoute, lastRoute);
 	lastRoute = nextRoute;
+	lastClass = result;
 	return result;
 }
 

@@ -10,9 +10,9 @@
 	},
 	"module": "DynamicRouter.es.js",
 	"main": "DynamicRouter.cjs.js",
+	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
-		"test": "npm run lint",
 		"build": "npm run build:cjs && npm run build:es",
 		"build:cjs": "cross-env-shell BABEL_ENV=cjs babel DynamicRouter.js --out-file DynamicRouter.cjs.js --source-maps",
 		"build:es": "cross-env-shell BABEL_ENV=es babel DynamicRouter.js --out-file DynamicRouter.es.js --source-maps",

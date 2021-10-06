@@ -4,7 +4,7 @@ react-dynamic-router
 
 [![Build Status](https://github.com/ultraq/react-dynamic-router/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/react-dynamic-router/actions)
 [![npm](https://img.shields.io/npm/v/@ultraq/react-dynamic-router.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-dynamic-router)
-[![License](https://img.shields.io/github/license/ultraq/react-dynamic-router.svg?maxAge=2592000)](https://github.com/ultraq/react-dynamic-router/blob/master/LICENSE.txt)
+[![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/react-dynamic-router)](https://bundlephobia.com/result?p=@ultraq/react-dynamic-router)
 
 Control the animation to apply to a React route transition.  This component is a
 combination router and animation component for dynamic class names based on

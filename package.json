@@ -18,6 +18,9 @@
 		"build:es": "cross-env-shell BABEL_ENV=es babel DynamicRouter.js --out-file DynamicRouter.es.js --source-maps",
 		"prepublishOnly": "npm run build"
 	},
+	"dependencies": {
+		"@babel/runtime": "^7.15.4"
+	},
 	"peerDependencies": {
 		"prop-types": "15",
 		"react": "16",
@@ -29,6 +32,7 @@
 		"@babel/core": "^7.8.4",
 		"@babel/plugin-proposal-class-properties": "^7.8.3",
 		"@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+		"@babel/plugin-transform-runtime": "^7.15.0",
 		"@babel/preset-env": "^7.8.4",
 		"@babel/preset-react": "^7.8.3",
 		"babel-eslint": "^10.0.3",
